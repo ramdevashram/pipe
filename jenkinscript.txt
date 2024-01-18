@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git') {
+            steps {
+                git 'https://github.com/ramdevashram/pipe.git'
+            }
+        }
+        stage('Maven') {
+            steps {
+                bat'mvn clean install'
+            }
+        }
+    }
+}
