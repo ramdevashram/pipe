@@ -7,9 +7,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/ramdevashram/pipe.git'
             }
         }
-        stage('Maven') {
+        stage('Build') {
             steps {
-                bat 'Maven install'
+                bat 'maven install'
             }
         }
     }
