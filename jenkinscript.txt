@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Maven') {
             steps {
-                bat 'mvn install'
+                bat 'Maven install'
             }
         }
     }
